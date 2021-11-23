@@ -2,6 +2,7 @@ import React from 'react';
 import { Deck, Slide, Heading, Image, Text, ListItem,
   UnorderedList, Link, CodePane, indentNormalizer, Appear,
 } from 'spectacle';
+import material from 'react-syntax-highlighter/dist/esm/styles/prism/material-dark';
 
 import rmmImg from './img/rmm.png';
 import beFeSchemaImg from './img/be-fe-schema.png';
@@ -14,13 +15,10 @@ const theme = {
     darkBg: "#3E4047",
     yellow: "#ffdc4e",
   },
-  primary: {
-    backgroundColor: 'red',
-  },
   fontSizes: {
     header: '64px',
     paragraph: '28px'
-  }
+  },
 }
 
 function App() {
@@ -62,9 +60,10 @@ function App() {
       <Slide backgroundColor="darkBg">
         <Heading>LEVEL 3: HATEOAS</Heading>
         <CodePane
-        fontSize={18}
-        language="js"
-        showLineNumbers={false}
+          theme={material}
+          fontSize={18}
+          language="js"
+          showLineNumbers={false}
         >
         {indentNormalizer(`
 {
@@ -75,7 +74,7 @@ function App() {
     "self": {
       "href": "/orders/66"
     },
-    // if I can't quote, there's no link...
+    // if I can't quote, there's no link!
     "quote": {
       "href": "/orders/66/quote",
     },
@@ -123,6 +122,7 @@ function App() {
         <Heading>🖇 Model 101</Heading>
         <CodePane
         fontSize={18}
+        theme={material}
         language="graphql"
         autoFillHeight
         >
@@ -145,6 +145,7 @@ function App() {
         <CodePane
         fontSize={18}
         language="graphql"
+        theme={material}
         autoFillHeight
         >
         {indentNormalizer(`
@@ -166,6 +167,7 @@ function App() {
             fontSize={18}
             language="graphql"
             showLineNumbers={false}
+            theme={material}
           >
             {indentNormalizer(`
               HTTP GET /orders/5
@@ -181,6 +183,7 @@ function App() {
           <CodePane
             fontSize={18}
             language="graphql"
+            theme={material}
             showLineNumbers={false}
           >
             {indentNormalizer(`
@@ -207,6 +210,7 @@ function App() {
           fontSize={12}
           language="graphql"
           autoFillHeight
+          theme={material}
           showLineNumbers={false}
         >
           {indentNormalizer(`
@@ -231,6 +235,7 @@ function App() {
         <Heading>💡 Focus: Directives</Heading>
         <CodePane
           fontSize={18}
+          theme={material}
           language="ts"
           showLineNumbers={false}
           autoFillHeight
@@ -261,26 +266,24 @@ function App() {
       </Slide>
       <Slide backgroundColor="darkBg">
         <Heading>🧠 Focus: Caching (FE w/ Apollo)</Heading>
-        <Text padding={0}>Support fetch policy on the query level (cache first, network only...)</Text>
-        <Text padding={0}>Internal cache out of the box</Text>
+        <Text margin={0}>Support fetch policy on the query level (cache first, network only...)
         {/* https://www.apollographql.com/docs/react/data/queries/#supported-fetch-policies */}
+        <br />
+        Internal cache out of the box</Text>
         <CodePane
           fontSize={12}
           language="graphql"
           showLineNumbers={false}
+          // highlightRanges={[1, 3]}
+          theme={material}
         >
           {indentNormalizer(`
-          query {
-            order(id: 3) {
-              id
-              name
-            }
-          }
-
           # will auto-update cache
           mutation {
-            UpdateOrder(id: 3, name: "Updated order") {
-              id
+            UpdateOrder(id: 3, name: "Updated order") { ... }
+          }
+          query {
+            order(id: 3) {
               name
             }
           }
@@ -292,6 +295,7 @@ function App() {
         <CodePane
           fontSize={18}
           language="graphql"
+          theme={material}
           showLineNumbers={false}
         >
           {indentNormalizer(`
@@ -313,6 +317,7 @@ function App() {
         <Heading>🤯 Focus: Preventing malicious querying</Heading>
         <CodePane
           fontSize={18}
+          theme={material}
           language="graphql"
           showLineNumbers={false}
         >
