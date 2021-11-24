@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/GraphQL-introduction/static/css/main.6dea0f05.chunk.css",
-    "main.js": "/GraphQL-introduction/static/js/main.b4423642.chunk.js",
-    "main.js.map": "/GraphQL-introduction/static/js/main.b4423642.chunk.js.map",
+    "main.js": "/GraphQL-introduction/static/js/main.4202d4ac.chunk.js",
+    "main.js.map": "/GraphQL-introduction/static/js/main.4202d4ac.chunk.js.map",
     "runtime-main.js": "/GraphQL-introduction/static/js/runtime-main.1ed122fe.js",
     "runtime-main.js.map": "/GraphQL-introduction/static/js/runtime-main.1ed122fe.js.map",
     "static/js/2.ea091007.chunk.js": "/GraphQL-introduction/static/js/2.ea091007.chunk.js",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.1ed122fe.js",
     "static/js/2.ea091007.chunk.js",
     "static/css/main.6dea0f05.chunk.css",
-    "static/js/main.b4423642.chunk.js"
+    "static/js/main.4202d4ac.chunk.js"
   ]
 }
