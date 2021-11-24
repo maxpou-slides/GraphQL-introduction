@@ -27,12 +27,6 @@ function App() {
       <Slide backgroundColor="darkBg">
         <Heading style={{height: '30%', margin: 'auto'}}>An introduction to GraphQL</Heading>
       </Slide>
-      {/* <Slide backgroundColor="darkBg">
-        <Heading>RPC style</Heading>
-      </Slide>
-      <Slide backgroundColor="darkBg">
-        <Heading>RPC style</Heading>
-      </Slide> */}
       <Slide backgroundColor="darkBg">
         <Heading>REST Architectural Style</Heading>
         <Image src={rmmImg} alt="Richardson Maturity Model" style={{width: '70%', margin: '0 auto'}}/>
@@ -62,7 +56,7 @@ function App() {
         <CodePane
           theme={material}
           fontSize={18}
-          language="js"
+          language="json"
           showLineNumbers={false}
         >
         {indentNormalizer(`
@@ -124,6 +118,7 @@ function App() {
         fontSize={18}
         theme={material}
         language="graphql"
+        showLineNumbers={false}
         autoFillHeight
         >
         {indentNormalizer(`
@@ -143,10 +138,11 @@ function App() {
       <Slide backgroundColor="darkBg">
         <Heading>🔎 Queries 101</Heading>
         <CodePane
-        fontSize={18}
-        language="graphql"
-        theme={material}
-        autoFillHeight
+          fontSize={18}
+          language="graphql"
+          theme={material}
+          showLineNumbers={false}
+          autoFillHeight
         >
         {indentNormalizer(`
           query GetOrdersAndCompanies {
