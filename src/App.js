@@ -260,8 +260,9 @@ function App() {
           <ListItem>browser caching <small>(i.e service workers)</small></ListItem>
           <ListItem>reverse proxy <small>(i.e varnish)</small></ListItem>
         </UnorderedList>
-        
-        <Text>... we always query the same endpoint <small>(https://myapi.com/graphql)</small></Text>
+        <Appear>
+          <Text>... we always query the same endpoint <small>(https://myapi.com/graphql)</small></Text>
+        </Appear>
         <Appear><Text>...But...</Text></Appear>
       </Slide>
       <Slide backgroundColor="darkBg">
